@@ -10,6 +10,12 @@ namespace EventsTraning
     {
         static void Main(string[] args)
         {
+            Publisher p = new Publisher();
+            p.FinishedRecivingInput += EvenNum.recivedDataIsEven;
+            p.FinishedRecivingInput += PrimeNum.recivedDataIsPrime;
+            p.FinishedRecivingInput += NonNum.recivedDataIsNotANum;
+            p.ReciveData();
+
         }
     }
 }
